@@ -52,3 +52,6 @@ dist/
 .DS_Store
 .vscode/
 .idea/
+
+# MyST build outputs
+_build

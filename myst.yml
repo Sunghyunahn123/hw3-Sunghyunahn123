@@ -1,0 +1,18 @@
+version: 1
+project:
+  title: STAT 159 HW3 - LIGO
+  github: https://github.com/UCB-stat-159-F25/hw3-Sunghyunahn123
+  binder: https://mybinder.org/v2/gh/UCB-stat-159-F25/hw3-Sunghyunahn123/HEAD
+  authors: Sunghyun Ahn
+  exclude:
+   - hw03_description.md
+  files:
+   - README.md
+   - LOSC_Event_tutorial.ipynb
+toc:
+  - file: README.md
+    title: Home
+  - file: LOSC_Event_tutorial.ipynb
+    title: Notebook
+site:
+  template: book-theme
