@@ -1,0 +1,1 @@
+ I used ChatGPT (GPT-5) as an assistant to how to code to setup path updating raw data, figure, and audio output paths to use structured folders (data/, figures/, audio/).
