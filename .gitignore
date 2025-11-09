@@ -14,7 +14,7 @@ audio/
 # Python cache
 __pycache__/
 
-# OS cruft (안 보이면 무시)
+# OS cruft 
 .DS_Store
 
 # Jupyter auto-saves
@@ -33,7 +33,7 @@ audio/
 # Python cache
 __pycache__/
 
-# OS cruft (안 보이면 무시)
+# OS cruft 
 .DS_Store
 # Jupyter
 .ipynb_checkpoints/
