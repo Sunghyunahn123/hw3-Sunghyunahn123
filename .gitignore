@@ -35,3 +35,20 @@ __pycache__/
 
 # OS cruft (안 보이면 무시)
 .DS_Store
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# pytest
+.pytest_cache/
+
+# OS/Editor
+.DS_Store
+.vscode/
+.idea/

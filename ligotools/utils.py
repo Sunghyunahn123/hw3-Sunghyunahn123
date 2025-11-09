@@ -77,14 +77,20 @@ def whiten(strain, interp_psd, dt):
     return white_ht
 
 def write_wavfile(filename, fs, data):
-    """Scale to int16 and write wav."""
-    d = np.int16(data / np.max(np.abs(data)) * 32767 * 0.9)
+    data = np.asarray(data)
+    if data.size == 0:
+        wavfile.write(filename, int(fs), np.int16([]))
+        return
+    peak = np.nanmax(np.abs(data))
+    if not np.isfinite(peak) or peak <= 0:
+        wavfile.write(filename, int(fs), np.zeros_like(data, dtype=np.int16))
+        return
+    d = (data / peak) * 32767 * 0.9
+    d = np.clip(d, -32768, 32767).astype(np.int16)
     wavfile.write(filename, int(fs), d)
 
+
 def reqshift(data, fshift=100, sample_rate=4096):
-    """
-    Constant frequency shift by fshift (Hz) via FFT bin roll.
-    """
     x = np.fft.rfft(data)
     T = len(data) / float(sample_rate)
     df = 1.0 / T
